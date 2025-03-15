@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Black background */
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow; /* Yellow text for the brand */
+    letter-spacing: 1px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: white; /* White text for links */
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .links a:hover {
+    color: yellow; /* Yellow text on hover */
+}
+
+/* Zodiac Card Styles */
+.zodiac-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zodiac-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.image-container img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+    flex: 2;
+    padding-left: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #f4c10f;
+    padding-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}

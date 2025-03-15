@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%load static%}
+  <title>Pooja Connect - Grah Dasha</title>
+  <link rel="stylesheet" href="{% static 'css/grahadasha_view.css'%}">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="brand">Pooja Connect</div>
+    <div class="links">
+        <a href="{% url 'main_home' %}">Home</a>
+        <a href="{% url 'astro_home'%}">Back</a>
+    </div>
+</nav>
+
+  <!-- Image and Content Section -->
+  <div class="container">
+    <div class="image-container">
+      <img src="{% static 'images/grahadasha_view.jpg'%}" alt="Grah Dasha Image"> <!-- Replace with your image URL -->
+      <div class="content">
+        <h1>Grah Dasha (Planetary Periods in Vedic Astrology)</h1>
+        <p>Grah Dasha refers to the planetary periods in Vedic astrology, which influence a person’s life events based on the position of planets at the time of birth. Each planet (Grah) has a specific time period in which it dominates a person's life, bringing different effects based on its placement in the birth chart.</p>
+      </div>
+    </div>
+
+    <!-- Types of Grah Dasha -->
+    <div class="section">
+      <h2>Types of Grah Dasha</h2>
+
+      <!-- Vimshottari Dasha Table -->
+      <h3>1. Vimshottari Dasha (Most Common)</h3>
+      <p>The most widely used Dasha system in Vedic astrology is Vimshottari Dasha, which spans 120 years and assigns specific time periods to each of the nine planets (Navagrahas):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Planet (Grah)</th>
+            <th>Ruling Period (Years)</th>
+            <th>Effects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sun (Surya)</td>
+            <td>6 years</td>
+            <td>Power, authority, leadership, ego</td>
+          </tr>
+          <tr>
+            <td>Moon (Chandra)</td>
+            <td>10 years</td>
+            <td>Emotions, mind, relationships, creativity</td>
+          </tr>
+          <tr>
+            <td>Mars (Mangal)</td>
+            <td>7 years</td>
+            <td>Strength, aggression, courage, energy</td>
+          </tr>
+          <tr>
+            <td>Mercury (Budh)</td>
+            <td>17 years</td>
+            <td>Intelligence, communication, business, learning</td>
+          </tr>
+          <tr>
+            <td>Jupiter (Guru)</td>
+            <td>16 years</td>
+            <td>Wisdom, knowledge, spirituality, prosperity</td>
+          </tr>
+          <tr>
+            <td>Venus (Shukra)</td>
+            <td>20 years</td>
+            <td>Love, beauty, luxury, happiness</td>
+          </tr>
+          <tr>
+            <td>Saturn (Shani)</td>
+            <td>19 years</td>
+            <td>Discipline, hardships, karma, justice</td>
+          </tr>
+          <tr>
+            <td>Rahu (North Node)</td>
+            <td>18 years</td>
+            <td>Materialism, desires, illusion, confusion</td>
+          </tr>
+          <tr>
+            <td>Ketu (South Node)</td>
+            <td>7 years</td>
+            <td>Detachment, spirituality, past life karma</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Each planetary period (Dasha) has its sub-periods (Antar Dasha), which further influence life events.</p>
+
+      <!-- Mahadasha, Antardasha & Pratyantar Dasha -->
+      <h3>2. Mahadasha, Antardasha & Pratyantar Dasha</h3>
+      <ul>
+        <li><strong>Mahadasha (Main Period):</strong> The longest planetary period.</li>
+        <li><strong>Antardasha (Sub-period):</strong> A smaller planetary influence within Mahadasha.</li>
+        <li><strong>Pratyantar Dasha (Sub-sub-period):</strong> More detailed effects within Antardasha.</li>
+      </ul>
+      <p>For example, if someone is in Mars Mahadasha, they will experience the influence of Mars strongly for 7 years, but different planets will rule the sub-periods (Antardasha) within these 7 years.</p>
+
+      <!-- Sade Sati Table -->
+      <h3>3. Sade Sati (Saturn’s 7.5-Year Period)</h3>
+      <p>Sade Sati occurs when Saturn (Shani) transits over a person’s Moon sign for 7.5 years. It is divided into three phases (2.5 years each):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Effects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First Phase</td>
+            <td>Financial or emotional difficulties</td>
+          </tr>
+          <tr>
+            <td>Second Phase</td>
+            <td>Career and personal struggles</td>
+          </tr>
+          <tr>
+            <td>Third Phase</td>
+            <td>Transformation and learning</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>This is considered a challenging period, but it also teaches discipline, patience, and karma lessons.</p>
+    </div>
+
+    <!-- Effects of Each Grah Dasha -->
+    <div class="section">
+      <h2>Effects of Each Grah Dasha</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Planet</th>
+            <th>Mahadasha Period</th>
+            <th>Positive Effects</th>
+            <th>Challenges</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>☀️ Sun (Surya)</td>
+            <td>6 years</td>
+            <td>Authority, success, confidence, leadership</td>
+            <td>Ego, arrogance, conflicts with authority</td>
+          </tr>
+          <tr>
+            <td>🌙 Moon (Chandra)</td>
+            <td>10 years</td>
+            <td>Emotional growth, creativity, mental peace</td>
+            <td>Mood swings, instability, emotional sensitivity</td>
+          </tr>
+          <tr>
+            <td>🔥 Mars (Mangal)</td>
+            <td>7 years</td>
+            <td>Energy, courage, ambition, strength</td>
+            <td>Anger, aggression, accidents, conflicts</td>
+          </tr>
+          <tr>
+            <td>🟢 Mercury (Budh)</td>
+            <td>17 years</td>
+            <td>Intelligence, communication, business success</td>
+            <td>Overthinking, nervousness, miscommunication</td>
+          </tr>
+          <tr>
+            <td>💛 Jupiter (Guru)</td>
+            <td>16 years</td>
+            <td>Wisdom, education, spirituality, financial growth</td>
+            <td>Overconfidence, laziness, negligence</td>
+          </tr>
+          <tr>
+            <td>💖 Venus (Shukra)</td>
+            <td>20 years</td>
+            <td>Love, beauty, luxury, material success</td>
+            <td>Overindulgence, relationship issues, addiction</td>
+          </tr>
+          <tr>
+            <td>⏳ Saturn (Shani)</td>
+            <td>19 years</td>
+            <td>Discipline, stability, hard work, karma rewards</td>
+            <td>Delays, struggles, responsibilities</td>
+          </tr>
+          <tr>
+            <td>🐉 Rahu</td>
+            <td>18 years</td>
+            <td>Sudden success, foreign travels, desires fulfillment</td>
+            <td>Confusion, illusion, addiction, instability</td>
+          </tr>
+          <tr>
+            <td>🐍 Ketu</td>
+            <td>7 years</td>
+            <td>Spiritual growth, detachment, enlightenment</td>
+            <td>Loss, separation, unpredictable life changes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- How to Check Your Current Grah Dasha? -->
+    <div class="section">
+      <h2>How to Check Your Current Grah Dasha?</h2>
+      <ul>
+        <li><strong>By Birth Chart (Janma Kundli):</strong> A Vedic astrologer checks your exact time, date, and place of birth to determine your current Mahadasha and Antardasha.</li>
+        <li><strong>Online Astrology Calculators:</strong> Many websites provide free Dasha calculators based on your birth details.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Pooja Connect</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'css/appointment_table.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pooja Connect</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_homepage' uid %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_signout' %}">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="table-container">
+        <!-- Image Container -->
+        <div class="image-container">
+            <img src="{% static 'images/namaste.webp' %}" alt="Namaste Image">
+        </div>
+        {{Data.User_ID.User_Id}}
+        <!-- Table Container -->
+        <div class="table-wrapper">
+            <table class="table table-bordered table-striped">
+                <thead class="table-warning">
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Pandit ID</th>
+                        <th>Pandit Name</th>
+                        <th>Pandit Email Id</th>
+                        <th>Work</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in Data %}
+                    <tr>
+                        <td>{{ i.id }}</td>
+                        <td>{{ i.Pandit_Id.Pandit_Id }}</td>
+                        <td>{{ i.Pandit_Id.Name }}</td>
+                        <td>{{ i.Pandit_Id.Email_Id }}</td>
+                        <td>{{ i.Work }}</td>
+                        <td>{{ i.Date }}</td>
+                        <!-- Dynamic Status Color -->
+                        <td class="
+                            {% if i.Status == 'Pending' %}status-pending
+                            {% elif i.Status == 'Declined' %}status-declined
+                            {% elif i.Status == 'Confirmed' %}status-confirmed
+                            {% else %}Status-default{% endif %}">
+                            {{ i.Status }}
+                        </td>
+                        <td>
+                            <a href="{% url 'update_appointment' i.id %}" class="btn btn-primary btn-sm">Update</a>
+                            <a href="{% url 'delete_appointment' i.id %}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

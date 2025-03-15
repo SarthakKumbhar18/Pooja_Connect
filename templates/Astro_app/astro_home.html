@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Astrology Insights - Pooja Connect</title>
+    <link rel="stylesheet" href="{% static 'css/astrohome.css' %}">
+    <style>
+        /* Adjust image size to fit perfectly in the image tile */
+        .image-placeholder {
+            width: 100%;
+            height: 220px; /* Fixed height for the image container */
+            overflow: hidden;
+            border-bottom: 4px solid #f1c40f; /* Golden border */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the entire container */
+        }
+
+        /* Make cards clickable */
+        .card {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+            display: block; /* Make the entire card clickable */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>Astrology Insights</h1>
+        <div class="cards-container">
+            <!-- Card 1: Horoscope -->
+            <a href="{% url 'horoscope'%}" class="card">
+                <article>
+                    <div class="image-placeholder">
+                        <img src="{%static 'images/horoscope.jpg'%}" alt="Horoscope Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Horoscope (राशिफल)</h2>
+                        <p>Predictions based on zodiac signs for career, love, health, and finances.</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Card 2: Numerology -->
+            <a href="{% url 'numerology'%}" class="card">
+                <article>
+                    <div class="image-placeholder">
+                        <img src="{%static 'images/numerology.jpg'%}" alt="Numerology Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Numerology (अंक ज्योतिष)</h2>
+                        <p>Study of numbers influencing personality and destiny.</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Card 3: Kundli -->
+            <a href="{% url 'kundli'%}" class="card">
+                <article>
+                    <div class="image-placeholder">
+                        <img src="{%static 'images/kundli.jpg'%}" alt="Kundli Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Kundli (कुंडली)</h2>
+                        <p>Birth chart showing planetary positions and their impact.</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Card 4: Panchang -->
+            <a href="{% url 'panchang'%}" class="card">
+                <article>
+                    <div class="image-placeholder">
+                        <img src="{%static 'images/panchang.jpg'%}" alt="Panchang Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Panchang (पंचांग)</h2>
+                        <p>Vedic calendar for auspicious timings and events.</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Card 5: Grah Dasha -->
+            <a href="{% url 'grahadasha'%}" class="card">
+                <article>
+                    <div class="image-placeholder">
+                        <img src="{%static 'images/Grahadasha.webp'%}" alt="Grah Dasha Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Grah Dasha (ग्रह दशा)</h2>
+                        <p>Planetary periods shaping major life events.</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Card 6: Gemstone Remedies -->
+            <a href="{% url 'gemstone'%}" class="card">
+                <article>
+                    <div class="image-placeholder">
+                        <img src="{%static 'images/Gemstone.webp'%}" alt="Gemstone Remedies Image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Gemstone Remedies (रत्न उपाय)</h2>
+                        <p>Wearing gemstones to enhance planetary effects.</p>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

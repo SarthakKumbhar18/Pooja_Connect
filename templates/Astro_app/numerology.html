@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Numerology Information</title>
+    <link rel="stylesheet" href="{% static 'css/numerology_view.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+            <a href="{% url 'astro_home'%}">Back</a>
+        </div>
+    </nav>
+    <main>
+        <table>
+            <tr>
+                <td><img src="{% static 'images/number1.webp'%}" alt="Sun" width="200" height="200"></td>
+                <td>
+                    <h2>1️⃣ Born on the 1st (1, 10, 19, 28)</h2>
+                    <p>People born on the 1st are natural leaders with a strong sense of independence. They are ambitious, confident, and determined to achieve their goals. Their innovative mindset and originality set them apart, making them great entrepreneurs or decision-makers. However, they may sometimes appear stubborn or overly dominant, needing to balance their assertiveness with humility.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number2.webp'%}" alt="Moon" width="200" height="200"></td>
+                <td>
+                    <h2>2️⃣ Born on the 2nd (2, 11, 20, 29)</h2>
+                    <p>Those born on the 2nd are highly intuitive, diplomatic, and sensitive. They are peace-loving individuals who excel in teamwork and relationships. Their ability to understand emotions makes them great mediators and problem-solvers. However, they can be overly emotional, indecisive, or dependent on others for validation. Developing inner strength and confidence can help them succeed.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number3.webp'%}" alt="Jupiter" width="200" height="200"></td>
+                <td>
+                    <h2>3️⃣ Born on the 3rd (3, 12, 21, 30)</h2>
+                    <p>Creativity, self-expression, and joy define those born on the 3rd. They are charismatic, fun-loving, and great communicators who thrive in artistic or social settings. Their optimism and enthusiasm attract success, but they must avoid being scattered or unfocused. Discipline and consistency can help them turn their talents into lasting achievements.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number4.webp'%}" alt="Rahu" width="200" height="200"></td>
+                <td>
+                    <h2>4️⃣ Born on the 4th (4, 13, 22, 31)</h2>
+                    <p>Hardworking, practical, and disciplined, people born on the 4th value stability and order. They are reliable, methodical, and detail-oriented, excelling in careers that require precision. Though they are trustworthy and dependable, they may resist change or become overly rigid in their thinking. Learning to embrace flexibility will help them grow.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number5.webp'%}" alt="Mercury" width="200" height="200"></td>
+                <td>
+                    <h2>5️⃣ Born on the 5th (5, 14, 23)</h2>
+                    <p>Freedom-loving and adventurous, those born on the 5th thrive on excitement and change. They are adaptable, curious, and quick learners, making them great at exploring new ideas and opportunities. Their energetic personality is inspiring, but they may struggle with restlessness or commitment. Finding balance between adventure and responsibility is key to their success.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number6.webp'%}" alt="Venus" width="200" height="200"></td>
+                <td>
+                    <h2>6️⃣ Born on the 6th (6, 15, 24)</h2>
+                    <p>Caring, responsible, and family-oriented, people born on the 6th have a strong sense of duty toward others. They are nurturing, artistic, and compassionate, often excelling in roles that involve caregiving or creativity. However, they may sometimes feel burdened by responsibilities or become overly controlling. Learning to set healthy boundaries can bring them peace.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number7.webp'%}" alt="Ketu" width="200" height="200"></td>
+                <td>
+                    <h2>7️⃣ Born on the 7th (7, 16, 25)</h2>
+                    <p>Deep thinkers with a spiritual and analytical mindset, those born on the 7th seek wisdom and knowledge. They are introspective, intuitive, and often drawn to philosophy or research. Their independent nature makes them unique, but they may struggle with social interactions or overanalyzing situations. Trusting their intuition and opening up to others will help them find balance.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number8.webp'%}" alt="Saturn" width="200" height="200"></td>
+                <td>
+                    <h2>8️⃣ Born on the 8th (8, 17, 26)</h2>
+                    <p>Ambitious, disciplined, and goal-oriented, people born on the 8th are destined for success in business and leadership. They are strategic thinkers with a strong work ethic, often excelling in financial or managerial roles. While they are powerful and determined, they must avoid being overly materialistic or authoritative. Practicing fairness and compassion will lead to true success.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/number9.webp'%}" alt="Mars" width="200" height="200"></td>
+                <td>
+                    <h2>9️⃣ Born on the 9th (9, 18, 27)</h2>
+                    <p>Compassionate, wise, and humanitarian, those born on the 9th have a deep desire to help others. They are idealistic, artistic, and emotionally strong, often drawn to charitable work or creative pursuits. Their broad vision makes them inspiring leaders, but they may struggle with letting go of the past or being too self-sacrificing. Finding a balance between giving and self-care is crucial for them.</p>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

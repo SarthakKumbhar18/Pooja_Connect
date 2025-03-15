@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Pooja Connect - Kundli</title>
+    <link rel="stylesheet" href="{% static 'css/kundli_view.css'%}">
+    
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+            <a href="{% url 'astro_home'%}">Back</a>
+        </div>
+    </nav>
+
+    <!-- Image and Content Section -->
+    <div class="container">
+        <div class="image-container">
+            <img src="{%static 'images/kundli_view.jpg'%}" alt="Kundli Image"> <!-- Replace with your image URL -->
+            <div class="content">
+                <h1>What is a Kundli?</h1>
+                <p>A Kundli (also known as Janam Kundali or Birth Chart) is an astrological chart that represents the
+                    planetary positions at the time of a person's birth. It is widely used in Vedic astrology to predict
+                    an individual’s future, personality, career, relationships, and more.</p>
+            </div>
+        </div>
+
+        <!-- Rest of the Content -->
+        <div class="section">
+            <h2>Importance of Kundli in Astrology</h2>
+            <ul>
+                <li><strong>Personality & Character:</strong> Helps understand an individual's nature, strengths, and
+                    weaknesses.</li>
+                <li><strong>Career & Finance:</strong> Provides insights into the best career paths and financial
+                    prospects.</li>
+                <li><strong>Marriage Compatibility:</strong> Kundli matching (Gun Milan) is used in Hindu traditions to
+                    check compatibility for marriage.</li>
+                <li><strong>Health Predictions:</strong> Indicates potential health issues and remedies.</li>
+                <li><strong>Dasha & Transits:</strong> Helps in analyzing major life events based on planetary periods
+                    (Mahadasha, Antardasha).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Kundli Structure & Key Components</h2>
+            <p>A Kundli is divided into 12 houses, each representing different aspects of life:</p>
+            <ul>
+                <li><strong>First House (Ascendant/Lagna):</strong> Personality, physical appearance, self-image.</li>
+                <li><strong>Second House:</strong> Wealth, family, speech.</li>
+                <li><strong>Third House:</strong> Siblings, communication, courage.</li>
+                <li><strong>Fourth House:</strong> Home, mother, comforts.</li>
+                <li><strong>Fifth House:</strong> Education, creativity, children.</li>
+                <li><strong>Sixth House:</strong> Health, enemies, debts.</li>
+                <li><strong>Seventh House:</strong> Marriage, partnerships.</li>
+                <li><strong>Eighth House:</strong> Longevity, mysteries, sudden events.</li>
+                <li><strong>Ninth House:</strong> Luck, religion, long journeys.</li>
+                <li><strong>Tenth House:</strong> Career, profession, status.</li>
+                <li><strong>Eleventh House:</strong> Gains, social circle, aspirations.</li>
+                <li><strong>Twelfth House:</strong> Expenses, losses, spirituality.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Planets in Kundli & Their Significance</h2>
+            <p>Each planet in astrology influences a person’s life based on its position in the Kundli:</p>
+            <ul>
+                <li><strong>Sun (Surya):</strong> Authority, ego, leadership.</li>
+                <li><strong>Moon (Chandra):</strong> Emotions, mind, mother.</li>
+                <li><strong>Mars (Mangal):</strong> Energy, aggression, courage.</li>
+                <li><strong>Mercury (Budh):</strong> Intelligence, communication, business.</li>
+                <li><strong>Jupiter (Guru):</strong> Wisdom, luck, education.</li>
+                <li><strong>Venus (Shukra):</strong> Love, beauty, luxury.</li>
+                <li><strong>Saturn (Shani):</strong> Discipline, hardship, karma.</li>
+                <li><strong>Rahu:</strong> Ambition, material success, illusions.</li>
+                <li><strong>Ketu:</strong> Spirituality, detachment, past karma.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Kundli Matching for Marriage (Gun Milan)</h2>
+            <p>In Hindu tradition, Kundli matching is done before marriage using the Ashtakoota method. It evaluates
+                compatibility based on 36 Gunas (points), where:</p>
+            <ul>
+                <li><strong>18+ points:</strong> Considered a good match.</li>
+                <li><strong>24+ points:</strong> Highly compatible.</li>
+                <li><strong>Below 18 points:</strong> Marriage is not recommended.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How to Read a Kundli?</h2>
+            <ul>
+                <li><strong>Identify Lagna (Ascendant):</strong> Determines basic personality.</li>
+                <li><strong>Check Planetary Positions:</strong> Their influence on different houses.</li>
+                <li><strong>Analyze Dasha System:</strong> Predicts major life events.</li>
+                <li><strong>Observe Transits (Gochar):</strong> Current planetary movements and effects.</li>
+                <li><strong>Look at Yogas & Doshas:</strong> Special combinations like Raj Yoga (success) or Mangal
+                    Dosha (marital issues).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Common Doshas & Remedies</h2>
+            <ul>
+                <li><strong>Mangal Dosha:</strong> Can cause marital issues, remedied by Hanuman Chalisa, fasting on
+                    Tuesdays, and Kumbh Vivah.</li>
+                <li><strong>Kaal Sarp Dosha:</strong> Causes struggles in life, remedied by worshiping Lord Shiva.</li>
+                <li><strong>Pitra Dosha:</strong> Family-related karma, remedied by Pitra Tarpan and Shraddha rituals.
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

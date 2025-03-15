@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandit Consultation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #000;
+            color: white;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #d9534f;
+        }
+
+        .consult-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .astrologers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .astrologer-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .astrologer-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .astrologer-card img {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+        }
+
+        .astrologer-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .astrologer-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .astrologer-card .rating {
+            color: #f90;
+        }
+
+        .astrologer-card .price {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .astrologer-card button {
+            margin: 5px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .astrologer-card button:hover {
+            background: #d9534f;
+            color: white;
+        }
+
+        .footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #ffcc00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">PoojaConnect</div>
+        <nav>
+            <a href="{% url 'user_appointment_table' uid %}">Appointment Table</a>
+            <a href="{% url 'user_signout'%}">Sign Out</a>
+        </nav>
+    </header>
+
+    <section class="consult-section">
+        <h1>Welcome to Pooja Connect </h1>
+        <div class="astrologers-grid">
+            {% for obj in pandits %}
+            <div class="astrologer-card">           
+                
+                    <img src="{{ obj.Image.url }}" alt="Pandit">
+                    <h3>{{ obj.Name }} - {{obj.Pandit_Id}}</h3>
+                    <p>Age: {{obj.Age}}</p>
+                    <p>Area : {{obj.Area}}</p>
+                    <p class="price">Work Experience: {{obj.Work_Experience}} years</p>
+                    <a href="{% url 'user_appointment'%}">
+                    <button>Book Appointment</button>
+                    </a>                
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 PoojaConnect. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

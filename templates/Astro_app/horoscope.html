@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Horoscope Information</title>
+    <link rel="stylesheet" href="{% static 'css/horoscope_view.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+            <a href="{% url 'astro_home'%}">Back</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Aries -->
+        <section id="aries" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/aries.webp'%}" alt="Aries" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♈ Aries (March 21 - April 19)</h2>
+                <p>Aries is a fire sign ruled by Mars, symbolizing energy, courage, and leadership. Aries individuals are bold, ambitious, and not afraid to take risks. They are natural leaders but can be impulsive and impatient.</p>
+            </div>
+        </section>
+
+        <!-- Taurus -->
+        <section id="taurus" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/tarus.webp'%}" alt="Taurus" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♉ Taurus (April 20 - May 20)</h2>
+                <p>Taurus is an earth sign ruled by Venus, representing stability, loyalty, and comfort. Taureans are practical and hardworking, enjoying luxury and security. However, they can also be stubborn and resistant to change.</p>
+            </div>
+        </section>
+
+        <!-- Gemini -->
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/gemini.webp'%}" alt="Gemini" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♊ Gemini (May 21 - June 20)</h2>
+                <p>Gemini is an air sign ruled by Mercury, known for intelligence, communication, and adaptability. Geminis are social, curious, and quick learners, but they can also be indecisive and restless.</p>
+            </div>
+        </section>
+
+        <!-- Add more zodiac signs here following the same structure -->
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/cancer.webp'%}" alt="Cancer" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♋ Cancer (June 21 - July 22)</h2>
+                <p>Cancer is a water sign ruled by the Moon, symbolizing emotions, intuition, and nurturing. Cancerians are deeply caring and protective of loved ones. However, they may also be moody and overly sensitive.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/leo.webp'%}" alt="Gemini" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♌ Leo (July 23 - August 22)</h2>
+                <p>Leo is a fire sign ruled by the Sun, associated with confidence, charisma, and creativity. Leos are natural entertainers and leaders, always seeking attention and admiration. They can sometimes be prideful or dramatic.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/virgo.webp'%}" alt="Virgo" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♍ Virgo (August 23 - September 22)</h2>
+                <p>Virgo is an earth sign ruled by Mercury, representing practicality, organization, and intelligence. Virgos are detail-oriented, analytical, and hardworking, but they can also be overly critical and perfectionists.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/libra.webp'%}" alt="Libra" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♎ Libra (September 23 - October 22)</h2>
+                <p>Libra is an air sign ruled by Venus, known for balance, beauty, and diplomacy. Librans seek harmony in relationships and have a strong sense of justice. However, they may struggle with indecisiveness and a desire to please everyone.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/scorpio.webp'%}" alt="Scorpio" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♏ Scorpio (October 23 - November 21)</h2>
+                <p>Scorpio is a water sign ruled by Pluto and Mars, symbolizing passion, mystery, and transformation. Scorpios are intense, determined, and deeply emotional, but they can also be secretive and vengeful.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/sagittarius.webp'%}" alt="Sagittarius" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♐ Sagittarius (November 22 - December 21)</h2>
+                <p>Sagittarius is a fire sign ruled by Jupiter, representing adventure, optimism, and freedom. Sagittarians love exploring new ideas and places. However, they can be reckless and blunt at times.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/capricorn.webp'%}" alt="Capricorn" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♑ Capricorn (December 22 - January 19)</h2>
+                <p>Capricorn is an earth sign ruled by Saturn, symbolizing discipline, ambition, and responsibility. Capricorns are hardworking and goal-oriented, but they may sometimes be too serious or pessimistic.
+
+                </p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/aquarius.webp'%}" alt="Aquarius" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♒ Aquarius (January 20 - February 18)</h2>
+                <p>Aquarius is an air sign ruled by Uranus and Saturn, associated with innovation, independence, and humanitarianism. Aquarians are forward-thinking and unique but may come across as detached or rebellious.</p>
+            </div>
+        </section>
+        <section id="gemini" class="zodiac-card">
+            <div class="image-container">
+                <img src="{% static 'images/pisces.webp'%}" alt="Pisces" width="200" height="200">
+            </div>
+            <div class="info-container">
+                <h2>♓ Pisces (February 19 - March 20)</h2>
+                <p>Pisces is a water sign ruled by Neptune, symbolizing intuition, empathy, and creativity. Pisceans are dreamy and compassionate, often drawn to artistic pursuits. However, they can be overly idealistic or escapist.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

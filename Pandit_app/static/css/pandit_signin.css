@@ -1,0 +1,164 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow;
+    letter-spacing: 1px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .links a:hover {
+    color: #f4c10f;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sign In Section */
+.signin-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.signin-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin-form {
+    flex: 1;
+    max-width: 400px;
+}
+
+.signin-form h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #f4c10f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.signin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signin-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.signin-form .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.signin-form .form-group input:focus {
+    border-color: #f4c10f;
+    outline: none;
+}
+
+.signin-btn {
+    background-color: #f4c10f;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signin-btn:hover {
+    background-color: #e0b10e;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #f4c10f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #e0b10e;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse; /* Ensures padding does not double */
+    width: 100%; /* Optional: Adjust width */
+}
+
+th, td {
+    padding: 5px; /* Reduce padding (adjust as needed) */
+    text-align: left;
+    border: 1px solid #ddd; /* Optional: Adds a border */
+}
+
+.signin-section table {
+    width: 100%;
+}
+
+.signin-section th, 
+.signin-section td {
+    padding: 5px; /* Adjust padding */
+}

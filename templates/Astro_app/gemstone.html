@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Gemstone Remedies</title>
+    <link rel="stylesheet" href="{% static 'css/gemstone_view.css'%}">
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+            <a href="{% url 'astro_home'%}">Back</a>
+        </div>
+    </nav>
+    <h1>Gemstone Remedies</h1>
+    <main>
+        <table>
+            <!-- Diamond -->
+            <tr>
+                <td><img src="{% static 'images/diamond.webp' %}" alt="Diamond"></td>
+                <td>
+                    <h2>Diamond (Heera)</h2>
+                    <p><strong>Remedy:</strong> Wearing a diamond enhances love, luxury, and financial stability. It is
+                        recommended for those seeking success in relationships and creativity.</p>
+                    <p><strong>Who Should Wear:</strong> People with Venus as a strong planet in their horoscope.</p>
+                    <p><strong>How to Wear:</strong> Set in gold or platinum, worn on the ring finger of the right hand
+                        on a Friday.</p>
+                </td>
+            </tr>
+            <!-- Ruby -->
+            <tr>
+                <td><img src="{% static 'images/ruby.webp' %}" alt="Ruby"></td>
+                <td>
+                    <h2>Ruby (Manikya)</h2>
+                    <p><strong>Remedy:</strong> Ruby is known for boosting self-confidence, leadership skills, and
+                        career success. It also improves blood circulation and vitality.</p>
+                    <p><strong>Who Should Wear:</strong> Those with a weak or afflicted Sun in their birth chart.</p>
+                    <p><strong>How to Wear:</strong> Set in gold or copper, worn on the ring finger of the right hand on
+                        a Sunday.</p>
+                </td>
+            </tr>
+            <!-- Sapphire -->
+            <tr>
+                <td><img src="{% static 'images/sapphire.webp' %}" alt="Sapphire"></td>
+                <td>
+                    <h2>Sapphire (Neelam)</h2>
+                    <p><strong>Remedy:</strong> Blue sapphire brings instant wealth, fame, and protection from evil
+                        influences. It also enhances intuition and mental clarity.</p>
+                    <p><strong>Who Should Wear:</strong> People with a strong Saturn (Shani) in their horoscope.</p>
+                    <p><strong>How to Wear:</strong> Set in silver or gold, worn on the middle finger of the right hand
+                        on a Saturday.</p>
+                </td>
+            </tr>
+            <!-- Emerald -->
+            <tr>
+                <td><img src="{% static 'images/emerald.webp' %}" alt="Emerald"></td>
+                <td>
+                    <h2>Emerald (Panna)</h2>
+                    <p><strong>Remedy:</strong> Emerald is beneficial for improving communication skills, intelligence,
+                        and emotional stability. It also helps with business growth.</p>
+                    <p><strong>Who Should Wear:</strong> Those with a weak Mercury (Budh) in their birth chart.</p>
+                    <p><strong>How to Wear:</strong> Set in gold or silver, worn on the little finger of the right hand
+                        on a Wednesday.</p>
+                </td>
+            </tr>
+            <!-- Amethyst -->
+            <tr>
+                <td><img src="{% static 'images/amethyst.webp' %}" alt="Amethyst"></td>
+                <td>
+                    <h2>Amethyst (Jamunia)</h2>
+                    <p><strong>Remedy:</strong> This stone is known for reducing stress, anxiety, and promoting
+                        spiritual growth. It is also useful for people struggling with addictions.</p>
+                    <p><strong>Who Should Wear:</strong> Those who seek mental peace and spiritual connection.</p>
+                    <p><strong>How to Wear:</strong> Set in silver, worn on the middle finger of the right hand on a
+                        Saturday.</p>
+                </td>
+            </tr>
+            <!-- Topaz -->
+            <tr>
+                <td><img src="{% static 'images/topaz.webp' %}" alt="Topaz"></td>
+                <td>
+                    <h2>Topaz (Pukhraj)</h2>
+                    <p><strong>Remedy:</strong> Topaz is believed to attract wealth, wisdom, and good fortune. It also
+                        helps in strengthening relationships.</p>
+                    <p><strong>Who Should Wear:</strong> People with a weak Jupiter (Guru) in their birth chart.</p>
+                    <p><strong>How to Wear:</strong> Set in gold, worn on the index finger of the right hand on a
+                        Thursday.</p>
+                </td>
+            </tr>
+            <!-- Garnet -->
+            <tr>
+                <td><img src="{% static 'images/garnet.webp' %}" alt="Garnet"></td>
+                <td>
+                    <h2>Garnet (Gomed)</h2>
+                    <p><strong>Remedy:</strong> Garnet protects against negative energies and provides strength,
+                        courage, and stability in life. It is also known to improve health conditions.</p>
+                    <p><strong>Who Should Wear:</strong> People experiencing Rahu-related issues in their horoscope.</p>
+                    <p><strong>How to Wear:</strong> Set in silver, worn on the middle finger of the right hand on a
+                        Saturday.</p>
+                </td>
+            </tr>
+            <!-- Peridot -->
+            <tr>
+                <td><img src="{% static 'images/peridot.webp' %}" alt="Peridot"></td>
+                <td>
+                    <h2>Peridot</h2>
+                    <p><strong>Remedy:</strong> Peridot promotes emotional balance, reduces stress, and attracts
+                        positivity in life. It also enhances self-esteem.</p>
+                    <p><strong>Who Should Wear:</strong> Those facing difficulties in self-growth and emotional
+                        stability.</p>
+                    <p><strong>How to Wear:</strong> Set in gold, worn on the little finger of the right hand on a
+                        Wednesday.</p>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <div class="disclaimer">
+        <p><strong>Disclaimer:</strong> We strongly advise against wearing any gemstone without proper consultation.
+            Each gemstone has unique astrological and healing properties, and wearing the wrong one may lead to adverse
+            effects. Always consult a certified astrologer or gemstone expert before making a decision.</p>
+    </div>
+</body>
+
+</html>

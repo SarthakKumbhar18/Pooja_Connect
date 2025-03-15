@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Pooja Connect - Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/pandit_signin.css' %}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+        </div>
+    </nav>
+    
+    <!-- Sign In Section -->
+    <main>
+        <div class="signin-section">
+            <!-- Image on the left -->
+            <div class="signin-image">
+                <img src="{% static 'images/signin_panditji.webp' %}" alt="Pandit Ji login">
+            </div>
+
+            <!-- Form on the right -->
+            <form class="signin-form compact-form" action="{% url 'pandit_signin' %}" method="POST">{% csrf_token %}
+                <h2>Sign In</h2>
+                <div class="form-group">
+                    <label for="pandit-id">Pandit ID:</label>
+                    <input type="text" id="pandit-id" name="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="uname" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="pwd" required>
+                </div>
+                <button type="submit" class="signin-btn">Sign In</button>
+                <p class="signup-link">Don't have an account? <a href="{% url 'pandit_signup' %}">Sign Up</a></p>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Pooja Connect - Pandit Registration</title>
+    <link rel="stylesheet" href="{% static 'css/pandit_signup.css'%}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'main_home' %}">Home</a>
+            <a href="{% url 'pandit_signin'%}">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <main>
+        <div class="profile-section">
+            <!-- Image on the left -->
+            <div class="profile-photo">
+                <img src="{% static 'images/midage pandit.webp'%}" alt="Pandit Ji Cartoon">
+            </div>
+
+            <!-- Form on the right -->
+            <form class="profile-info" action="{% url 'pandit_signup'%}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                <h2>Pandit Registration Form</h2>
+                <div class="form-group">
+                    <label for="pandit-id">Pandit ID:</label>
+                    <input type="number" id="pandit-id" name="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Area:</label>
+                    <select id="area" name="area" required>
+                        <option value="">Select Area</option>
+                        <option value="Kothrud">Kothrud</option>
+                        <option value="Hinjewadi">Hinjewadi</option>
+                        <option value="Wakad">Wakad</option>
+                        <option value="Baner">Baner</option>
+                        <option value="Pimpri">Pimpri</option>
+                        <option value="Chinchwad">Chinchwad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Work Experience (in years):</label>
+                    <input type="number" id="experience" name="experience" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Profile Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="eml" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="update-profile">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

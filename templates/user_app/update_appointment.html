@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="{% static 'css/update_appointment.css' %}"> 
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <!-- Brand Name -->
+        <a href="#" class="brand">Pooja Connect</a>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="{% url 'user_homepage' objs.User_ID.User_Id%}" class="home">Home</a> <!-- Home button with no background color -->
+            <a href="{% url 'user_signout' %}">Signout</a>
+        </div>
+    </div>
+
+    <!-- Appointment Container -->
+    <div class="appointment-container">
+        <h2>Update Appointment Details</h2>
+        <form action="{% url 'update_appointment' objs.id %}" method="POST">{% csrf_token %}
+            <!-- Pandit ID and User ID in one row -->
+            <div class="form-row">
+                <div>
+                    <label for="pandit_id">Pandit ID:</label>
+                    <input type="number" id="pandit_id" name="pid" placeholder = "{{objs.Pandit_Id.Pandit_Id}}" value="{{objs.Pandit_Id.Pandit_Id}}" required readonly>
+                </div>
+                <div>
+                    <label for="user_id">User ID:</label>
+                    <input type="number" id="user_id" name="uid" placeholder = "{{objs.User_ID.User_Id}}" value="{{objs.User_ID.User_Id}}" required readonly>
+                </div>
+            </div>
+
+            <!-- User Name and Phone Number in one row -->
+            <div class="form-row">
+                <div>
+                    <label for="user_name">Your Name:</label>
+                    <input type="text" id="user_name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phn" placeholder="Enter your phone number" required>
+                </div>
+            </div>
+
+            <!-- Date and Work Type in one row -->
+            <div class="form-row">
+                <div>
+                    <label for="date">Appointment Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="work_type">Work Type:</label>
+                    <select id="work_type" name="work" required>
+                        <option value="" disabled selected>Select work type</option>
+                        <option value="Home Puja">Home Puja</option>
+                        <option value="Hawan">Hawan</option>
+                        <option value="Satyanarayan Puja">Satyanarayan Puja</option>
+                        <option value="Shadi Puja">Shadi Puja</option>
+                        <option value="Navgraha Puja">Navgraha Puja</option>
+                        <option value="Vastu Shanti">Vastu Shanti</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Update</button>
+        </form>
+    </div>
+
+</body>
+</html>

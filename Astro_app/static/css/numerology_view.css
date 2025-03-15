@@ -1,0 +1,103 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Black background */
+    padding: 15px 40px;
+    box-shadow: var(--shadow);
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow; /* Yellow text for the brand */
+    letter-spacing: 1px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: white; /* White text for links */
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar .links a:hover {
+    color: var(--secondary-color); /* Hover color for links */
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+td:first-child {
+    width: 30%;
+    text-align: center;
+}
+
+td:last-child {
+    width: 70%;
+}
+
+img {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #f4c10f;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}

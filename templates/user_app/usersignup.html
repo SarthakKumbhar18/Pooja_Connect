@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{% static 'css/user_signup.css' %}">
+    <style>
+        /* Add space between the image and form */
+        .form-container {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            gap: 40px; /* Adds space between the image and form */
+        }
+
+        .image-box img {
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto;
+        }
+
+        .form-box {
+            flex: 1; /* Allow the form to take up remaining space */
+        }
+
+        /* Style for the sign-in link */
+        .signin-link {
+            margin-top: 15px;  /* Space above the sign-in link */
+            text-align: center; /* Center the text */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span class="brand-name">Pooja Connect</span>
+        <a href="{% url 'main_home' %}">Home</a>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="image-box">
+                <img src="{% static 'images/user_signup.webp' %}" alt="Signup Image">
+            </div>
+            <div class="form-box">
+                <h2>Signup</h2>
+                <form action="{% url 'user_signup' %}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <label>User ID</label>
+                        <input type="text" name="uid" placeholder="Enter User ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" name="emlid" placeholder="Enter Email ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="uname" placeholder="Enter Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="pwd" placeholder="Enter Password" required>
+                    </div>
+                    <button class="btn">Submit</button>
+                </form>
+                <p class="signin-link">Already have an account? <a href="{% url 'user_signin' %}">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

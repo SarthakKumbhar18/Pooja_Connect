@@ -1,0 +1,124 @@
+/* General Styles */
+:root {
+    --primary-color: #2c3e50;
+    /* Dark blue */
+    --secondary-color: #f1c40f;
+    /* Golden yellow */
+    --accent-color: #e67e22;
+    /* Orange */
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 40px;
+    box-shadow: var(--shadow);
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar .links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--secondary-color);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-size: 26px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin: 0;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="{% static 'css/profile_view.css' %}">
+
+    <script>
+        function confirmLogout(event) {
+            event.preventDefault();
+            if (confirm("Are you sure you want to log out?")) {
+                window.location.href = event.target.href;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="brand">Pooja Connect</div>
+        <div class="links">
+            <a href="{% url 'pandit_signout' %}" onclick="confirmLogout(event)">Signout</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="profile-section">
+            <img src="{{ Data.Image.url }}" alt="Profile Photo" class="profile-photo">
+            <div class="profile-info">
+                <h2>Ram Ram {{ user.username }}!</h2>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>Appointment Table</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+                {% for i in data1 %}
+                <tr>
+                    <td>{{ i.User_ID.User_Id }}</td>
+                    <td>{{ i.Name }}</td>
+                    <td>{{ i.Phone_no }}</td>
+                    <td>{{ i.Date }}</td>
+                    <td>{{ i.Work }}</td>
+                    <td class="status-{{ i.Status|lower }}">
+                        {{ i.Status }}
+                    </td>
+                    <td class="action-icons">
+                        <a href="{% url 'appointment_confirmation' i.id %}" class="tick" aria-label="Confirm">&#10004;</a>
+                        <a href="{% url 'appointment_declined' i.id %}" class="cross" aria-label="Decline">&#10006;</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="8">No Appointments Found</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+</body>
+</html>

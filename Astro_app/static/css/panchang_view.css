@@ -1,0 +1,127 @@
+/* Previously used CSS for Pooja Connect */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* Black background */
+    padding: 15px 40px;
+    box-shadow: var(--shadow);
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow;
+    /* Yellow text for the brand */
+    letter-spacing: 1px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: white;
+    /* White text for links */
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar .links a:hover {
+    color: var(--secondary-color);
+    /* Hover color for links */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* New CSS for the image */
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    /* Adjust the size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container .content {
+    flex: 1;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
